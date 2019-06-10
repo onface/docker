@@ -1,0 +1,17 @@
+version: "2"
+services:
+  # php:
+  #   restart: always
+  #   image: onface-laravel-php
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - ./app:/app
+  #   command: php-fpm
+  nginx:
+    restart: always
+    image: onface-laravel-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/app
